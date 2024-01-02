@@ -1,10 +1,19 @@
 package day1;
 
+import java.util.Arrays;
+
 public class ConcatinationOfArray {
 	public static void main(String[] args) {
-		
+		int[] arr= new int[]{1,2,1};
+		System.out.println(Arrays.toString(concatinateArray(arr)));
 	}
-
+	private static int[] concatinateArray(int[] arr) {
+		int[]res=new int[arr.length *2];
+		for (int i = 0; i < arr.length; i++) {
+            res[i+arr.length]=res[i]=arr[i];
+        }
+		return res;
+	}
 }
 
 //Given an integer array nums of length n, you want to create an array ans of length 2n where ans[i] == nums[i] and ans[i + n] == nums[i] for 0 <= i < n (0-indexed).
