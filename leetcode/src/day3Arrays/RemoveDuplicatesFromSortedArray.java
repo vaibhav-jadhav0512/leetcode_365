@@ -2,19 +2,19 @@ package day3Arrays;
 
 public class RemoveDuplicatesFromSortedArray {
 	public static void main(String[] args) {
-		int[] arr = new int[] {0,0,1,1,1,2,2,3,3,4};
+		int[] arr = new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
 		System.out.println(removeDuplicatesFromSortedArray(arr));
 	}
 
 	private static int removeDuplicatesFromSortedArray(int[] arr) {
-		  int i=0;
-	        for(int j=1;j<arr.length;j++){
-	            if(arr[i]!=arr[j]){
-	                i++;
-	                arr[i]=arr[j];
-	            }
-	        }
-	        return i+1;
+		int i = 0;
+		for (int j = 1; j < arr.length; j++) {
+			if (arr[i] != arr[j]) {
+				i++;
+				arr[i] = arr[j];
+			}
+		}
+		return i + 1;
 	}
 
 }
@@ -42,4 +42,3 @@ public class RemoveDuplicatesFromSortedArray {
 //Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
 //Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
 //It does not matter what you leave beyond the returned k (hence they are underscores).
- 
