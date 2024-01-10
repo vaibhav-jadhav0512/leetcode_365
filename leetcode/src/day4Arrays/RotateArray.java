@@ -26,16 +26,6 @@ public class RotateArray {
         }
 		return arr;
 	}
-	private static void reverse(int[] arr, int start, int end) {
-		while (start <= end) {
-			int temp = arr[start];
-			arr[start] = arr[end];
-			arr[end] = temp;
-			start++;
-			end--;
-		}
-	}
-
 	private static int[][] rotateArray(int[][] arr) {
 		int[][] temp = new int[arr.length][arr[0].length];
 		for (int i = 0; i < arr.length; i++) {
